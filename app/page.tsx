@@ -29,8 +29,8 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          {/* Logo + Text in one flex container */}
+        <div className="container mx-auto px-4 py-4 flex items-center justify-start">
+          {/* Logo + Text centered */}
           <div className="flex items-center space-x-5">
             <Image
               src="/logo.png?height=40&width=120"
@@ -45,51 +45,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* CTA Button & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            {/* Mobile Menu Button */}
-            <button className="md:hidden p-2 text-gray-700 hover:text-[#7FB77E] transition-colors duration-300">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation (hidden by default) */}
-        <div className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm">
-          <nav className="container mx-auto px-4 py-4 space-y-3">
-            <Link
-              href="#"
-              className="block text-gray-700 hover:text-[#7FB77E] transition-colors duration-300 font-medium py-2"
-            >
-              Beranda
-            </Link>
-            <Link
-              href="#services"
-              className="block text-gray-700 hover:text-[#7FB77E] transition-colors duration-300 font-medium py-2"
-            >
-              Layanan
-            </Link>
-            <Link
-              href="#about"
-              className="block text-gray-700 hover:text-[#7FB77E] transition-colors duration-300 font-medium py-2"
-            >
-              Tentang Kami
-            </Link>
-            <Link
-              href="#testimonials"
-              className="block text-gray-700 hover:text-[#7FB77E] transition-colors duration-300 font-medium py-2"
-            >
-              Testimoni
-            </Link>
-            <Link
-              href="#contact"
-              className="block text-gray-700 hover:text-[#7FB77E] transition-colors duration-300 font-medium py-2"
-            >
-              Kontak
-            </Link>
-          </nav>
+          
         </div>
       </header>
 
@@ -132,8 +88,10 @@ const HomePage = () => {
                 className="bg-[#7FB77E] hover:bg-[#5D8C5A] text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
                 asChild
               >
-                <Link href="#contact">Konsultasi Gratis</Link>
-              </Button>
+                <Link href="https://wa.me/6282112722049" target="_blank" rel="noopener noreferrer">
+                  Konsultasi Gratis
+                </Link>              
+                </Button>
               <Button
                 size="lg"
                 variant="outline"
@@ -147,61 +105,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-12 bg-gray-50 border-b">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <p className="text-gray-600 font-medium">Dipercaya oleh berbagai jenis bisnis</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/logo.png?height=60&width=120"
-                alt="Client logo"
-                width={120}
-                height={60}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/logo.png?height=60&width=120"
-                alt="Client logo"
-                width={120}
-                height={60}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/logo.png?height=60&width=120"
-                alt="Client logo"
-                width={120}
-                height={60}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/logo.png?height=60&width=120"
-                alt="Client logo"
-                width={120}
-                height={60}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/logo.png?height=60&width=120"
-                alt="Client logo"
-                width={120}
-                height={60}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
@@ -400,7 +304,9 @@ const HomePage = () => {
                 className="bg-[#7FB77E] hover:bg-[#5D8C5A] text-white px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
                 asChild
               >
-                <Link href="#contact">Pelajari Lebih Lanjut</Link>
+                                <Link href="https://wa.me/6282112722049" target="_blank" rel="noopener noreferrer">
+                  Konsultasi Gratis
+                </Link>
               </Button>
             </div>
           </div>
