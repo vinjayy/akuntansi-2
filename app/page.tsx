@@ -24,6 +24,24 @@ import Link from "next/link"
 import Image from "next/image"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
+
+interface EmailButtonProps {
+  email: string
+}
+
+function EmailButton({ email }: EmailButtonProps) {
+  return (
+    <a
+      href={`mailto:${email}`}
+      className="fixed bottom-20 right-6 bg-blue-500 hover:bg-blue-600 text-white rounded-full px-4 py-3 shadow-lg transition-all hover:scale-110 z-50 flex items-center space-x-2"      
+      aria-label="Send Email"
+    >
+      <Mail className="w-6 h-6" />
+      <span className="text-sm font-medium whitespace-nowrap">Email Kami</span>
+    </a>
+  )
+}
+
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -439,8 +457,8 @@ const HomePage = () => {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold text-[#2D5A27]">Budi Santoso</h4>
-                    <p className="text-sm text-gray-600">CEO, PT Maju Bersama</p>
+                    <h4 className="font-semibold text-[#2D5A27]">Irawan</h4>
+                    <p className="text-sm text-gray-600">Direktur PT. Global Multisentosa</p>
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
@@ -467,8 +485,8 @@ const HomePage = () => {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold text-[#2D5A27]">Sari Dewi</h4>
-                    <p className="text-sm text-gray-600">Owner, Toko Elektronik</p>
+                    <h4 className="font-semibold text-[#2D5A27]">Frendi</h4>
+                    <p className="text-sm text-gray-600">Owner, Ejo Shop</p>
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
@@ -495,8 +513,8 @@ const HomePage = () => {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold text-[#2D5A27]">Ahmad Rahman</h4>
-                    <p className="text-sm text-gray-600">Direktur, CV Sukses Mandiri</p>
+                    <h4 className="font-semibold text-[#2D5A27]">Mega</h4>
+                    <p className="text-sm text-gray-600">Owner, TB Niaga Jaya</p>
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
@@ -541,6 +559,9 @@ const HomePage = () => {
 
       {/* Add floating WhatsApp button */}
       <WhatsAppButton phoneNumber="6282112722049" />
+
+            {/* Add floating Email button */}
+      <EmailButton email="accelerate.indo38@gmail.com" />
     </div>
   )
 }
